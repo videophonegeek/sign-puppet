@@ -20,6 +20,37 @@
     <div id="main_content">
       <h3>Sample Poses</h3>
       <dl class='clearfix'>
+        <dt>ASL FS:</dt>
+        <dd>
+            <ul id="hand_shapes" class="inline">
+                <li><a href="#a">A</a></li>
+                <li><a href="#b">B</a></li>
+                <li><a href="#c">C</a></li>
+                <li><a href="#d">D</a></li>
+                <li><a href="#e">E</a></li>
+                <li><a href="#f">F</a></li>
+                <li><a href="#g">G</a></li>
+                <li><a href="#h">H</a></li>
+                <li><a href="#i">I</a></li>
+                <li><a href="#j">J</a></li>
+                <li><a href="#k">K</a></li>
+                <li><a href="#l">L</a></li>
+                <li><a href="#m">M</a></li>
+                <li><a href="#n">N</a></li>
+                <li><a href="#o">O</a></li>
+                <li><a href="#p">P</a></li>
+                <li><a href="#q">Q</a></li>
+                <li><a href="#r">R</a></li>
+                <li><a href="#s">S</a></li>
+                <li><a href="#t">T</a></li>
+                <li><a href="#u">U</a></li>
+                <li><a href="#v">V</a></li>
+                <li><a href="#w">W</a></li>
+                <li><a href="#x">X</a></li>
+                <li><a href="#y">Y</a></li>
+                <li><a href="#z">Z</a></li>
+            </ul>
+        </dd>
         <dt>Body:</dt>
         <dd>
           <ul id="poses" class="inline">
@@ -27,15 +58,16 @@
             <li><a href="#out">Out</a></li>
             <li><a href="#down">Down</a></li>
             <li><a href="#in_pose">In</a></li>
+            <li><a href="#signing_po">Signing PO</a></li>
+            <li><a href="#signing_pi">Signing PI</a></li>
             <li><a href="#default_pose">Default</a></li>
           </ul>
         </dd>
         <dt>Hand:</dt>
         <dd>
           <ul id="hand_poses" class="inline">
-            <li><a href="#s">Fist</a></li>
             <li><a href="#5">Five</a></li>
-            <li><a href="#A">Thumb</a></li>
+            <li><a href="#thumb">Thumb</a></li>
             <li><a href="#1">Point</a></li>
             <li><a href="#B">Palm</a></li>
           </ul>
@@ -199,6 +231,34 @@
     <script>
       var poses = {
         default_pose : {},
+        signing_po : {
+            rby  : 0,
+            rbz  : 1,
+            rrz  : 180,
+            rrx  : 90,
+            rry  : 90,
+            lby  : 1,
+            lbz  : 1,
+            lrz  : 90,
+            lrx  : 0,
+            e0y  : 1,
+            e1y  : 1,
+            ez   : 1
+        },
+        signing_pi : {
+            rby  : 0,
+            rbz  : 1,
+            rrz  : 0,
+            rrx  : 0,
+            rry  : 90,
+            lby  : 1,
+            lbz  : 1,
+            lrz  : 90,
+            lrx  : 0,
+            e0y  : 1,
+            e1y  : 1,
+            ez   : 1
+        },
         forward : {
           rby  : 0,
           rbz  : 1,
@@ -250,12 +310,528 @@
           lrx  : 90,
           bx : .75
         },
+        a : {
+            ri0  : 1,  ri1  : 1, ri2  : 0,  ris  : 0,
+            rm0  : 1,  rm1  : 1, rm2  : 0,  rms  : 0,
+            rr0  : 1,  rr1  : 1, rr2  : 0,  rrs  : 0,
+            rp0  : 1,  rp1  : 1, rp2  : 0,  rps  : 0,
+            rt0x : -1, rt0y : 0, rt1x : 0, rt1y : 0, rt2x : 0,
+            
+            rby  : 0,
+            rbz  : 1,
+            rrz  : 180,
+            rrx  : 90,
+            rry  : 90,
+            lby  : 1,
+            lbz  : 1,
+            lrz  : 90,
+            lrx  : 0,
+            e0y  : 1,
+            e1y  : 1,
+            ez   : 1
+        },
+        b : {
+            ri0  : 0,  ri1  : 0, ri2  : 0,  ris  : 0,
+            rm0  : 0,  rm1  : 0, rm2  : 0,  rms  : 0,
+            rr0  : 0,  rr1  : 0, rr2  : 0,  rrs  : 0,
+            rp0  : 0,  rp1  : 0, rp2  : 0,  rps  : 0,
+            rt0x : -1, rt0y : 0, rt1x : 0, rt1y : 0, rt2x : 0,
+            
+            rby  : 0,
+            rbz  : 1,
+            rrz  : 180,
+            rrx  : 90,
+            rry  : 90,
+            lby  : 1,
+            lbz  : 1,
+            lrz  : 90,
+            lrx  : 0,
+            e0y  : 1,
+            e1y  : 1,
+            ez   : 1
+        },
+        c : {
+            ri0  : .75,  ri1  : .25, ri2  : 0,  ris  : 0,
+            rm0  : .75,  rm1  : .25, rm2  : 0,  rms  : 0,
+            rr0  : .75,  rr1  : .25, rr2  : 0,  rrs  : 0,
+            rp0  : .75,  rp1  : .25, rp2  : 0,  rps  : 0,
+            rt0x : 0, rt0y : 1, rt1x : 0, rt1y : .9, rt2x : 0,
+            
+            rby  : 0,
+            rbz  : 1,
+            rrz  : 180,
+            rrx  : 90,
+            rry  : 70,
+            lby  : 1,
+            lbz  : 1,
+            lrz  : 90,
+            lrx  : 0,
+            e0y  : 1,
+            e1y  : 1,
+            ez   : 1
+        },
+        d : {
+            ri0  : 0,  ri1  : 0, ri2  : 0,  ris  : 0,
+            rm0  : 1,  rm1  : .25, rm2  : 0,  rms  : 0,
+            rr0  : 1,  rr1  : .25, rr2  : 0,  rrs  : 0,
+            rp0  : 1,  rp1  : .25, rp2  : 0,  rps  : 0,
+            rt0x : 0, rt0y : 1, rt1x : 0, rt1y : .9, rt2x : 0,
+            
+            rby  : 0,
+            rbz  : 1,
+            rrz  : 180,
+            rrx  : 90,
+            rry  : 70,
+            lby  : 1,
+            lbz  : 1,
+            lrz  : 90,
+            lrx  : 0,
+            e0y  : 1,
+            e1y  : 1,
+            ez   : 1
+        },
+        e : {
+            ri0  : 1,  ri1  : 1, ri2  : 0,  ris  : 0,
+            rm0  : 1,  rm1  : 1, rm2  : 0,  rms  : 0,
+            rr0  : 1,  rr1  : 1, rr2  : 0,  rrs  : 0,
+            rp0  : 1,  rp1  : 1, rp2  : 0,  rps  : 0,
+            rt0x : 0, rt0y : 1, rt1x : 1, rt1y : .9, rt2x : 0,
+            
+            rby  : 0,
+            rbz  : 1,
+            rrz  : 180,
+            rrx  : 90,
+            rry  : 90,
+            lby  : 1,
+            lbz  : 1,
+            lrz  : 90,
+            lrx  : 0,
+            e0y  : 1,
+            e1y  : 1,
+            ez   : 1
+        },
+        f : {
+            ri0  : 1,  ri1  : .25, ri2  : 0,  ris  : 0,
+            rm0  : 0,  rm1  : 0, rm2  : 0,  rms  : 0,
+            rr0  : 0,  rr1  : 0, rr2  : 0,  rrs  : 0,
+            rp0  : 0,  rp1  : 0, rp2  : 0,  rps  : 0,
+            rt0x : 0, rt0y : 1, rt1x : 0, rt1y : .9, rt2x : 0,
+            
+            rby  : 0,
+            rbz  : 1,
+            rrz  : 180,
+            rrx  : 90,
+            rry  : 70,
+            lby  : 1,
+            lbz  : 1,
+            lrz  : 90,
+            lrx  : 0,
+            e0y  : 1,
+            e1y  : 1,
+            ez   : 1
+        },
+        g : {
+            ri0  : 0,  ri1  : .1, ri2  : 0,  ris  : 0,
+            rm0  : 1,  rm1  : 1, rm2  : 0,  rms  : 0,
+            rr0  : 1,  rr1  : 1, rr2  : 0,  rrs  : 0,
+            rp0  : 1,  rp1  : 1, rp2  : 0,  rps  : 0,
+            rt0x : -1, rt0y : 1, rt1x : 0, rt1y : .25, rt2x : 0,
+            
+            rby  : 0,
+            rbz  : 1,
+            rrz  : -90,
+            rrx  : 0,
+            rry  : 60,
+            lby  : 1,
+            lbz  : 1,
+            lrz  : 90,
+            lrx  : 0,
+            e0y  : 1,
+            e1y  : 1,
+            ez   : 1
+        },
+        h : {
+            ri0  : 0,  ri1  : 0, ri2  : 0,  ris  : 0,
+            rm0  : 0,  rm1  : 0, rm2  : 0,  rms  : 0,
+            rr0  : 1,  rr1  : 1, rr2  : 0,  rrs  : 0,
+            rp0  : 1,  rp1  : 1, rp2  : 0,  rps  : 0,
+            rt0x : -1, rt0y : 0, rt1x : 0, rt1y : 0, rt2x : 0,
+            
+            rby  : 0,
+            rbz  : 1,
+            rrz  : 0,
+            rrx  : 0,
+            rry  : 90,
+            lby  : 1,
+            lbz  : 1,
+            lrz  : 90,
+            lrx  : 0,
+            e0y  : 1,
+            e1y  : 1,
+            ez   : 1
+        },
+        i : {
+            ri0  : 1,  ri1  : 1, ri2  : 0,  ris  : 0,
+            rm0  : 1,  rm1  : 1, rm2  : 0,  rms  : 0,
+            rr0  : 1,  rr1  : 1, rr2  : 0,  rrs  : 0,
+            rp0  : 0,  rp1  : 0, rp2  : 0,  rps  : 0,
+            rt0x : -1, rt0y : 0, rt1x : 0, rt1y : 0, rt2x : 0,
+            
+            rby  : 0,
+            rbz  : 1,
+            rrz  : 180,
+            rrx  : 90,
+            rry  : 90,
+            lby  : 1,
+            lbz  : 1,
+            lrz  : 90,
+            lrx  : 0,
+            e0y  : 1,
+            e1y  : 1,
+            ez   : 1
+        },
+        j : {
+            ri0  : 1,  ri1  : 1, ri2  : 0,  ris  : 0,
+            rm0  : 1,  rm1  : 1, rm2  : 0,  rms  : 0,
+            rr0  : 1,  rr1  : 1, rr2  : 0,  rrs  : 0,
+            rp0  : 0,  rp1  : 0, rp2  : 0,  rps  : 0,
+            rt0x : -1, rt0y : 0, rt1x : 0, rt1y : 0, rt2x : 0,
+            
+            rby  : 0,
+            rbz  : 1,
+            rrz  : 180,
+            rrx  : 90,
+            rry  : 90,
+            lby  : 1,
+            lbz  : 1,
+            lrz  : 90,
+            lrx  : 0,
+            e0y  : 1,
+            e1y  : 1,
+            ez   : 1
+        },
+        k : {
+            ri0  : 0,    ri1  : 0, ri2  : 0,   ris  : 0,
+            rm0  : .8,    rm1  : 0, rm2  : 0, rms  : 0,
+            rr0  : 1,    rr1  : 1, rr2  : 0.5, rrs  : 0,
+            rp0  : 1,    rp1  : 1, rp2  : 0.5, rps  : 0,
+            rt0x : -.75, rt0y: .75, rt1x : 0, rt1y: .5, rt2x : -.25,
+            
+            rby  : 0,
+            rbz  : 1,
+            rrz  : 180,
+            rrx  : 90,
+            rry  : 60,
+            lby  : 1,
+            lbz  : 1,
+            lrz  : 90,
+            lrx  : 0,
+            e0y  : 1,
+            e1y  : 1,
+            ez   : 1
+        },
+        l : {
+            ri0  : 0,    ri1  : 0, ri2  : 0,   ris  : 0,
+            rm0  : 1,    rm1  : 1, rm2  : 0.5, rms  : 0,
+            rr0  : 1,    rr1  : 1, rr2  : 0.5, rrs  : 0,
+            rp0  : 1,    rp1  : 1, rp2  : 0.5, rps  : 0,
+            rt0x : -.75, rt0y: .5, rt1x : -1, rt1y: .5, rt2x : .25,
+            
+            rby  : 0,
+            rbz  : 1,
+            rrz  : 180,
+            rrx  : 90,
+            rry  : 90,
+            lby  : 1,
+            lbz  : 1,
+            lrz  : 90,
+            lrx  : 0,
+            e0y  : 1,
+            e1y  : 1,
+            ez   : 1
+        },
+        m : {
+            ri0  : .9,  ri1  : .5, ri2 : 0, ris: -.1,
+            rm0  : .9,  rm1  : .5, rm2 : 0, rms: -.1,
+            rr0  : .9,  rr1  : .5, rr2 : 0, rrs: -.1,
+            rp0  : 1,  rp1  : .9, rp2 : .0, rps: -.1,
+            rt0x : -.75, rt0y: .5, rt1x : .5, rt1y: .5, rt2x : .25,
+            
+            rby  : 0,
+            rbz  : 1,
+            rrz  : 180,
+            rrx  : 90,
+            rry  : 90,
+            lby  : 1,
+            lbz  : 1,
+            lrz  : 90,
+            lrx  : 0,
+            e0y  : 1,
+            e1y  : 1,
+            ez   : 1
+            
+        },
+        n : {
+            ri0  : .9,  ri1  : .5, ri2 : 0, ris: -.1,
+            rm0  : .9,  rm1  : .5, rm2 : 0, rms: -.1,
+            rr0  : 1,  rr1  : .9, rr2 : 0, rrs: -.1,
+            rp0  : 1,  rp1  : .9, rp2 : .0, rps: -.1,
+            rt0x : -.75, rt0y: .5, rt1x : .5, rt1y: .5, rt2x : .25,
+            
+            rby  : 0,
+            rbz  : 1,
+            rrz  : 180,
+            rrx  : 90,
+            rry  : 90,
+            lby  : 1,
+            lbz  : 1,
+            lrz  : 90,
+            lrx  : 0,
+            e0y  : 1,
+            e1y  : 1,
+            ez   : 1
+            
+        },
+        o : {
+            ri0  : 1,  ri1  : .25, ri2  : 0,  ris  : 0,
+            rm0  : 1,  rm1  : .25, rm2  : 0,  rms  : 0,
+            rr0  : 1,  rr1  : .25, rr2  : 0,  rrs  : 0,
+            rp0  : 1,  rp1  : .25, rp2  : 0,  rps  : 0,
+            rt0x : 0, rt0y : 1, rt1x : 0, rt1y : .9, rt2x : 0,
+            
+            rby  : 0,
+            rbz  : 1,
+            rrz  : 180,
+            rrx  : 90,
+            rry  : 70,
+            lby  : 1,
+            lbz  : 1,
+            lrz  : 90,
+            lrx  : 0,
+            e0y  : 1,
+            e1y  : 1,
+            ez   : 1
+        },
+        p : {
+            ri0  : 0,    ri1  : 0, ri2  : 0,   ris  : 0,
+            rm0  : .8,    rm1  : 0, rm2  : 0, rms  : 0,
+            rr0  : 1,    rr1  : 1, rr2  : 0.5, rrs  : 0,
+            rp0  : 1,    rp1  : 1, rp2  : 0.5, rps  : 0,
+            rt0x : -.75, rt0y: .75, rt1x : 0, rt1y: .5, rt2x : -.25,
+            
+            rby  : 0,
+            rbz  : 1,
+            rrz  : 90,
+            rrx  : -90,
+            rry  : 60,
+            lby  : 1,
+            lbz  : 1,
+            lrz  : 90,
+            lrx  : 0,
+            e0y  : 1,
+            e1y  : 1,
+            ez   : 1
+        },
+        q: {
+            ri0  : 0,  ri1  : .1, ri2  : 0,  ris  : 0,
+            rm0  : 1,  rm1  : 1, rm2  : 0,  rms  : 0,
+            rr0  : 1,  rr1  : 1, rr2  : 0,  rrs  : 0,
+            rp0  : 1,  rp1  : 1, rp2  : 0,  rps  : 0,
+            rt0x : -1, rt0y : 1, rt1x : 0, rt1y : .25, rt2x : 0,
+            
+            rby  : 0,
+            rbz  : 1,
+            rrz  : -90,
+            rrx  : -90,
+            rry  : -90,
+            lby  : 1,
+            lbz  : 1,
+            lrz  : 90,
+            lrx  : 0,
+            e0y  : 1,
+            e1y  : 1,
+            ez   : 1
+        },
+        r : {
+            ri0  : 0,  ri1  : 0, ri2  : 0,  ris  : -1,
+            rm0  : 0,  rm1  : 0, rm2  : 0,  rms  : 1,
+            rr0  : 1,  rr1  : 1, rr2  : 0,  rrs  : 0,
+            rp0  : 1,  rp1  : 1, rp2  : 0,  rps  : 0,
+            rt0x : -1, rt0y : 0, rt1x : 0, rt1y : 0, rt2x : 0,
+            
+            rby  : 0,
+            rbz  : 1,
+            rrz  : 180,
+            rrx  : 90,
+            rry  : 90,
+            lby  : 1,
+            lbz  : 1,
+            lrz  : 90,
+            lrx  : 0,
+            e0y  : 1,
+            e1y  : 1,
+            ez   : 1
+        },
         s : {
           ri0  : 1,  ri1  : .9, ri2 : .75, ris: -.1,
           rm0  : 1,  rm1  : .9, rm2 : .75, rms: -.1,
           rr0  : 1,  rr1  : .9, rr2 : .75, rrs: -.1,
           rp0  : 1,  rp1  : .9, rp2 : .75, rps: -.1,
-          rt0x : -.75, rt0y: .5, rt1x : .5, rt1y: .5, rt2x : .25
+          rt0x : -.75, rt0y: .5, rt1x : .5, rt1y: .5, rt2x : .25,
+          
+          rby  : 0,
+          rbz  : 1,
+          rrz  : 180,
+          rrx  : 90,
+          rry  : 90,
+          lby  : 1,
+          lbz  : 1,
+          lrz  : 90,
+          lrx  : 0,
+          e0y  : 1,
+          e1y  : 1,
+          ez   : 1
+        },
+        t : {
+            ri0  : 1,  ri1  : 0, ri2  : 1,  ris  : 1,
+            rm0  : 1,  rm1  : 1, rm2  : 0,  rms  : -1,
+            rr0  : 1,  rr1  : 1, rr2  : 0,  rrs  : 1,
+            rp0  : 1,  rp1  : 1, rp2  : 0,  rps  : 0,
+            rt0x : -1, rt0y : 0, rt1x : 1, rt1y : 0, rt2x : 0,
+            
+            rby  : 0,
+            rb   : 1,
+            rbz  : 1,
+            rrz  : 180,
+            rrx  : 180,
+            rry  : 180,
+            lby  : 1,
+            lbz  : 1,
+            lrz  : 90,
+            lrx  : 0,
+            e0y  : 1,
+            e1y  : 1,
+            ez   : 1
+        },
+        u : {
+            ri0  : 0,  ri1  : 0, ri2  : 0,  ris  : 0,
+            rm0  : 0,  rm1  : 0, rm2  : 0,  rms  : 0,
+            rr0  : 1,  rr1  : 1, rr2  : 0,  rrs  : 0,
+            rp0  : 1,  rp1  : 1, rp2  : 0,  rps  : 0,
+            rt0x : -1, rt0y : 0, rt1x : 0, rt1y : 0, rt2x : 0,
+            
+            rby  : 0,
+            rbz  : 1,
+            rrz  : 0,
+            rrx  : 90,
+            rry  : 90,
+            lby  : 1,
+            lbz  : 1,
+            lrz  : 90,
+            lrx  : 0,
+            e0y  : 1,
+            e1y  : 1,
+            ez   : 1
+        },
+        v : {
+            ri0  : 0,  ri1  : 0, ri2  : 0,  ris  : 1,
+            rm0  : 0,  rm1  : 0, rm2  : 0,  rms  : -1,
+            rr0  : 1,  rr1  : 1, rr2  : 0,  rrs  : 0,
+            rp0  : 1,  rp1  : 1, rp2  : 0,  rps  : 0,
+            rt0x : -1, rt0y : 0, rt1x : 0, rt1y : 0, rt2x : 0,
+            
+            rby  : 0,
+            rbz  : 1,
+            rrz  : 0,
+            rrx  : 90,
+            rry  : 90,
+            lby  : 1,
+            lbz  : 1,
+            lrz  : 90,
+            lrx  : 0,
+            e0y  : 1,
+            e1y  : 1,
+            ez   : 1
+        },
+        w : {
+            ri0  : 0,  ri1  : 0, ri2 : 0, ris: 0,
+            rm0  : 0,  rm1  : 0, rm2 : .0, rms: 0,
+            rr0  : 0,  rr1  : 0, rr2 : 0, rrs: 0,
+            rp0  : 1,  rp1  : .9, rp2 : .75, rps: -.5,
+            rt0x : -.75, rt0y: .5, rt1x : .5, rt1y: .5, rt2x : .25,
+            
+            rby  : 0,
+            rbz  : 1,
+            rrz  : 180,
+            rrx  : 90,
+            rry  : 90,
+            lby  : 1,
+            lbz  : 1,
+            lrz  : 90,
+            lrx  : 0,
+            e0y  : 1,
+            e1y  : 1,
+            ez   : 1
+        },
+        x : {
+            ri0  : 0,  ri1  : 0, ri2 : 1, ris: 0,
+            rm0  : 1,  rm1  : .9, rm2 : .75, rms: -.1,
+            rr0  : 1,  rr1  : .9, rr2 : .75, rrs: -.1,
+            rp0  : 1,  rp1  : .9, rp2 : .75, rps: -.1,
+            rt0x : -.75, rt0y: .5, rt1x : .5, rt1y: .5, rt2x : .25,
+            
+            rby  : 0,
+            rbz  : 1,
+            rrz  : 180,
+            rrx  : 90,
+            rry  : 60,
+            lby  : 1,
+            lbz  : 1,
+            lrz  : 90,
+            lrx  : 0,
+            e0y  : 1,
+            e1y  : 1,
+            ez   : 1
+        },
+        y : {
+            ri0  : 0,  ri1  : 0, ri2 : 0, ris: 0,
+            rm0  : 1,  rm1  : .9, rm2 : .75, rms: -.1,
+            rr0  : 1,  rr1  : .9, rr2 : .75, rrs: -.1,
+            rp0  : 0,  rp1  : 0, rp2 : 0, rps: 0,
+            rt0x : -.75, rt0y: .5, rt1x : .5, rt1y: .5, rt2x : .25,
+            
+            rby  : 0,
+            rbz  : 1,
+            rrz  : 180,
+            rrx  : 90,
+            rry  : 90,
+            lby  : 1,
+            lbz  : 1,
+            lrz  : 90,
+            lrx  : 0,
+            e0y  : 1,
+            e1y  : 1,
+            ez   : 1
+        },
+        z : {
+            ri0  : 0,    ri1  : 0, ri2  : 0,   ris  : 0,
+            rm0  : 1,    rm1  : 1, rm2  : 0.5, rms  : 0,
+            rr0  : 1,    rr1  : 1, rr2  : 0.5, rrs  : 0,
+            rp0  : 1,    rp1  : 1, rp2  : 0.5, rps  : 0,
+            rt0x : -.75, rt0y: .5, rt1x : .75, rt1y: .5, rt2x : .25,
+            
+            rby  : 0,
+            rbz  : 1,
+            rrz  : 180,
+            rrx  : 90,
+            rry  : 90,
+            lby  : 1,
+            lbz  : 1,
+            lrz  : 90,
+            lrx  : 0,
+            e0y  : 1,
+            e1y  : 1,
+            ez   : 1
         },
         5 : {
           ri0  : 0,  ri1  : 0, ri2  : 0,  ris  : 1,
@@ -264,7 +840,7 @@
           rp0  : 0,  rp1  : 0, rp2  : 0,  rps  : 1,
           rt0x : -1, rt0y : 0, rt1x : -1, rt1y : 0, rt2x : 0
         },
-        A : {
+        thumb : {
           ri0  : 1,  ri1  : 1, ri2  : 0,  ris  : 0,
           rm0  : 1,  rm1  : 1, rm2  : 0,  rms  : 0,
           rr0  : 1,  rr1  : 1, rr2  : 0,  rrs  : 0,
@@ -415,6 +991,14 @@
             animator.setTarget(channels);
           });
         });
+        $('#hand_shapes a').each(function () {
+            $(this).click(function (e) {
+                e.preventDefault();
+                applyPose(poses[$(this).attr('href').substring(1)]);
+                animator.setTarget(channels);
+            });
+        });
+                        
       });
 
 
